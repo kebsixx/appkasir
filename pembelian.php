@@ -4,7 +4,7 @@
         <li class="breadcrumb-item active">Pembelian</li>
     </ol>
 
-    <a href="?page=tambah_produk" class="btn btn-primary mb-4">Tambah Data</a>
+    <a href="?page=tambah_pembelian" class="btn btn-primary mb-4">Tambah Data</a>
     <table class="table table-bordered">
         <tr>
             <th>Tanggal Penjualan</th>
