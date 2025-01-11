@@ -10,10 +10,15 @@ if (isset($_POST['simpan'])) {
     $id = $idTerakhir['PenjualanID'];
 
     foreach ($produk as $key => $value) {
-        $pr = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM produk WHERE ProdukID = '$key'"));
-        $sub = $pr['Harga'] * $value;
-        $total += $sub;
-        $query = mysqli_query($koneksi, "INSERT INTO detailpenjualan (PenjualanID, ProdukID, JumlahProduk, SubTotal) VALUES ('$id', '$key', '$value', '$sub')");
+        $produk = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM produk WHERE ProdukID = '$key'"));
+
+        if ($value > 0) {
+            $subtotal = $produk['Harga'] * $value;
+            $total += $subtotal;
+            $query = mysqli_query($koneksi, "INSERT INTO detailpenjualan (PenjualanID, ProdukID, JumlahProduk, Subtotal) VALUES ('$id', '$key', '$value', '$subtotal')");
+
+            $updateProduk = mysqli_query($koneksi, "UPDATE produk SET Stok = Stok - '$value' WHERE ProdukID = '$key'");
+        }
     }
 
     $query = mysqli_query($koneksi, "UPDATE penjualan SET TotalHarga = '$total' WHERE PenjualanID = '$id'");
