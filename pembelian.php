@@ -21,7 +21,7 @@
                 <td><?= $pembelian['NamaPelanggan']; ?></td>
                 <td><?= $pembelian['TotalHarga']; ?></td>
                 <td>
-                    <a href="?page=edit_pembelian&id=<?= $pembelian['PenjualanID']; ?>" class="btn btn-warning">Edit</a>
+                    <a href="?page=detail_pembelian&id=<?= $pembelian['PenjualanID']; ?>" class="btn btn-info">Detail</a>
                     <a href="?page=hapus_pembelian&id=<?= $pembelian['PenjualanID']; ?>" class="btn btn-danger">Hapus</a>
                 </td>
             </tr>
