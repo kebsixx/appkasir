@@ -43,7 +43,7 @@ if (!isset($_SESSION['user'])) {
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -114,7 +114,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    <?= $_SESSION['user']['name']; ?>
                 </div>
             </nav>
         </div>
