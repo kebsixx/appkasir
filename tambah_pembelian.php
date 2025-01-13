@@ -24,7 +24,6 @@ if (isset($_POST['simpan'])) {
     $query = mysqli_query($koneksi, "UPDATE penjualan SET TotalHarga = '$total' WHERE PenjualanID = '$id'");
 
     if ($query) {
-        echo "<script>alert('Data berhasil ditambahkan');</script>";
         echo "<script>location='?page=pembelian';</script>";
     } else {
         echo "<script>alert('Data gagal ditambahkan');</script>";

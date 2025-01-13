@@ -7,7 +7,6 @@ if (isset($_POST['simpan'])) {
     $query = mysqli_query($koneksi, "INSERT INTO produk (NamaProduk, Harga, Stok) VALUES ('$NamaProduk', '$Harga', '$Stok')");
 
     if ($query) {
-        echo "<script>alert('Data berhasil ditambahkan');</script>";
         echo "<script>location='?page=produk';</script>";
     } else {
         echo "<script>alert('Data gagal ditambahkan');</script>";
