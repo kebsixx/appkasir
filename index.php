@@ -21,6 +21,7 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body class="sb-nav-fixed">
+<<<<<<< HEAD
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="index.php">APP</a>
@@ -33,13 +34,21 @@ if (!isset($_SESSION['user'])) {
                 <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
             </div>
         </form>
+=======
+    <nav class="sb-topnav navbar navbar-expand d-flex justify-content-between align-items-center navbar-dark bg-dark">
+        <div>
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.php">Kasir</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 ms-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        </div>
+>>>>>>> 1f8a77d83f811e752da55fefc32cc161b16207d3
         <!-- Navbar-->
-        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <ul class="navbar-nav ms-auto ms-md-0 me-5 me-lg-4 items-end">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li><a class="dropdown-item" href="#"><?= $_SESSION['user']['name']; ?></a></li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
