@@ -11,7 +11,6 @@ if (isset($_POST['username'])) {
         $_SESSION['user'] = $data;
         echo '
                 <script>
-                    alert("Selamat datang!");
                     location.href="index.php";
                 </script>
             ';

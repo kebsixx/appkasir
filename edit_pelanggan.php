@@ -9,7 +9,6 @@ if (isset($_POST['simpan'])) {
     $query = mysqli_query($koneksi, "UPDATE pelanggan SET NamaPelanggan = '$NamaPelanggan', NomorTelepon = '$NomorTelepon', Alamat = '$Alamat' WHERE PelangganID = '$id'");
 
     if ($query) {
-        echo "<script>alert('Data Berhasil Diubah');</script>";
         echo "<script>location='?page=pelanggan';</script>";
     } else {
         echo "<script>alert('Data Gagal Diubah');</script>";
